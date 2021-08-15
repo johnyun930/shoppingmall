@@ -16,6 +16,7 @@ import './checkout.styles.scss';
                 <span>Description</span>
    
             </div><div className="header-block">
+                
                 <span>Quantity</span>
    
             </div><div className="header-block">
