@@ -8,6 +8,7 @@ import { selectCollectionsForPreview, } from '../../redux/shop/shop.selectors';
 import { CollectionOverviewContainter } from './collections-overview.styles';
 
 const CollectionsOverview = ({items})=>{
+    console.log(items);
     return(
     <CollectionOverviewContainter>
         {

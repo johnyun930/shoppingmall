@@ -12,6 +12,7 @@ import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selector';
 import  CheckoutPage from './pages/checkout/checkout.component';
 import SignIn from './components/sign-in/sign-in.component';
+import Signup from './components/sign-up/sign-up.component';
 class App extends React.Component {
   
 
@@ -46,13 +47,15 @@ class App extends React.Component {
     console.log(this.props.currentUser);
 
   return (
+  
     <div className="App">
       <Header />
       <Switch>
       <Route exact path="/" component={HomePage}/>
       <Route path='/shop' component={ShopPage}/>
+
       <Route exact path="/checkout" component={CheckoutPage}/>
-      <Route exact path='/signin'render={()=>this.props.currentUser?(<Redirect to='/'></Redirect>):(<SignIn/>)}/>
+      <Route exact path='/signin'render={()=>this.props.currentUser?(<Redirect to='/'></Redirect>):(<SignInAndSignUpPage/>)}/>
     </Switch>
      </div>
   );

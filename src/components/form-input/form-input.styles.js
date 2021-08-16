@@ -18,7 +18,7 @@ export const GroupContainer = styled.div`
   }
 `;
 
-export const FormInput = styled.input`
+export const FormInputContainer = styled.input`
   background: none;
   background-color: white;
   color: $sub-color;

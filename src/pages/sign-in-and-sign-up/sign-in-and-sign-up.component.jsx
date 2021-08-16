@@ -5,8 +5,8 @@ import { SignInAndOutContainer } from './sign-in-and-sign-up.styles.js';
 
 const SignInAndSignUpPage = ()=>(
     <SignInAndOutContainer>
-        {/* <SignIn/> */}
-        {/* <Signup/> */}
+        <SignIn/> 
+         <Signup/>
     </SignInAndOutContainer>
 )
 
