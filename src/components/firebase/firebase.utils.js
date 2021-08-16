@@ -21,6 +21,8 @@ const firebaseConfig = {
       return;
     }
     const userRef = firestore.doc(`users/${userAuth.uid}`);
+   
+   
     const snapShot = await userRef.get();
 
     if(!snapShot.exists){
@@ -44,6 +46,17 @@ const firebaseConfig = {
 
   }
 
+
+  export const addCollectionAndDocuments = async (collectionKey, objectsToAdd)=>{
+    const collectionRef = firestore.collection(collectionKey);
+    const batch = firestore.batch();
+    objectsToAdd.forEach(obj=>{
+      const newDocRef = collectionRef.doc();
+      batch.set(newDocRef,obj)
+    });
+
+    return await batch.commit();
+  }
 
 
 
